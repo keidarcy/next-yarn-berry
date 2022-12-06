@@ -35,6 +35,10 @@ export default function Ssr({ random }: { random: number }) {
 export async function getServerSideProps() {
   const random = Math.floor(Math.random() * 100);
 
+  console.log('\n++++++++++++++++++++++++++++++++++++');
+  console.log('SSR: ', random);
+  console.log('++++++++++++++++++++++++++++++++++++\n');
+
   return {
     props: {
       random,

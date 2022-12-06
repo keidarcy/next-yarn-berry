@@ -35,6 +35,10 @@ export default function Sg({ random }: { random: number }) {
 export async function getStaticProps() {
   const random = Math.floor(Math.random() * 100);
 
+  console.log('\n++++++++++++++++++++++++++++++++++++');
+  console.log('SG: ', random);
+  console.log('++++++++++++++++++++++++++++++++++++\n');
+
   return {
     props: {
       random,
