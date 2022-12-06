@@ -1,4 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# .yarn (https://github.com/yarnpkg/berry/issues/454)
+**/.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/patches
+.pnp.*
 
 # dependencies
 /node_modules
