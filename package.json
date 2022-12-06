@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "YARN=$(yarn -v) next dev -p 9999",
-    "build": "next build",
+    "build": "YARN=$(yarn -v) next build",
     "start": "next start -p 9999",
     "lint": "next lint"
   },
