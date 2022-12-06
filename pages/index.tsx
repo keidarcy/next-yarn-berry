@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -17,9 +18,14 @@ export default function Home() {
           <a href="https://github.com/keidarcy/next-yarn-berry">code!</a>
         </h1>
 
-        <p className={styles.description}>
-          check code in <code className={styles.code}>pages/index.tsx</code>
-        </p>
+        <ul className={styles.description}>
+          <li className={styles.title}>
+            <Link href="/sg">SG PAGE</Link>
+          </li>
+          <li className={styles.title}>
+            <Link href="/ssr">SSR PAGE</Link>
+          </li>
+        </ul>
       </main>
 
       <footer className={styles.footer}>
