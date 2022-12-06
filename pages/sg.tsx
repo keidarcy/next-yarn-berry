@@ -12,11 +12,11 @@ export default function Sg({ random }: { random: number }) {
       </Head>
 
       <main className={styles.main}>
-        <div className="main">
+        <div className={styles.title}>
           <p>
             SG PAGE
             <br />
-            <em>{random}</em>
+            <h1 className={styles.title}>{random}</h1>
           </p>
         </div>
         <ul className={styles.description}>
@@ -25,6 +25,9 @@ export default function Sg({ random }: { random: number }) {
           </li>
           <li className={styles.title}>
             <Link href="/sg">SG PAGE</Link>
+          </li>
+          <li className={styles.title}>
+            <Link href="/ssr">SSR PAGE</Link>
           </li>
         </ul>
       </main>

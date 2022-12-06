@@ -20,6 +20,9 @@ export default function Home() {
 
         <ul className={styles.description}>
           <li className={styles.title}>
+            <Link href="/">HOME(Static)</Link>
+          </li>
+          <li className={styles.title}>
             <Link href="/sg">SG PAGE</Link>
           </li>
           <li className={styles.title}>

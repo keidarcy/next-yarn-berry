@@ -12,16 +12,19 @@ export default function Ssr({ random }: { random: number }) {
       </Head>
 
       <main className={styles.main}>
-        <div className="main">
+        <div className={styles.title}>
           <p>
             SSR PAGE
             <br />
-            <em>{random}</em>
+            <h1 className={styles.title}>{random}</h1>
           </p>
         </div>
         <ul className={styles.description}>
           <li className={styles.title}>
             <Link href="/">HOME</Link>
+          </li>
+          <li className={styles.title}>
+            <Link href="/sg">SG PAGE</Link>
           </li>
           <li className={styles.title}>
             <Link href="/ssr">SSR PAGE</Link>
