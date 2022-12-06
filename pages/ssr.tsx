@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
-export default function Ssr({ random }: { random: number }) {
+export default function Ssr({ random, yarn }: { random: number; yarn: string }) {
   return (
     <>
       <Head>
@@ -17,11 +17,12 @@ export default function Ssr({ random }: { random: number }) {
             SSR PAGE
             <br />
             <h1 className={styles.title}>{random}</h1>
+            <h1 className={styles.title}>yarn version: {yarn}</h1>
           </p>
         </div>
         <ul className={styles.description}>
           <li className={styles.title}>
-            <Link href="/">HOME</Link>
+            <Link href="/">HOME(static)</Link>
           </li>
           <li className={styles.title}>
             <Link href="/sg">SG PAGE</Link>
@@ -37,14 +38,17 @@ export default function Ssr({ random }: { random: number }) {
 
 export async function getServerSideProps() {
   const random = Math.floor(Math.random() * 100);
+  const yarn = process.env.YARN;
 
   console.log('\n++++++++++++++++++++++++++++++++++++');
+  console.log('YARN', yarn);
   console.log('SSR: ', random);
   console.log('++++++++++++++++++++++++++++++++++++\n');
 
   return {
     props: {
       random,
+      yarn,
     },
   };
 }
