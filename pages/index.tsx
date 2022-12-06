@@ -13,7 +13,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a> in Vercel with yarn berry
+          Nextjs in vercel with yarn berry. Check{' '}
+          <a href="https://github.com/keidarcy/next-yarn-berry">code!</a>
         </h1>
 
         <p className={styles.description}>
